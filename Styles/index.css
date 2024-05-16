@@ -28,22 +28,28 @@ header {
     justify-content: flex-end;
 }
 
+
 .contato {
     margin-right: 200px;
 }
 
-h2 {
+a {
+    text-decoration: none;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
     margin-left: 50px;
+    color: black;
 }
 
 .home01 {
     font-family: "Poppins", sans-serif;
     font-weight: 600;
     font-style: normal;
-    margin-right: 1100px;
+    margin-right: 280px;
+    font-size: x-large;
+    text-decoration: none;
+    color: black;
 }
 
 .div-seguidores{
@@ -70,12 +76,12 @@ footer{
     font-weight: 600;
     font-style: normal;
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    /*\align-items: center;
+    justify-content: flex-start;*/ 
 }
 
 .svg-instagram{
-    margin-left: 1090px;
+    margin-left: 50px;
 }
 
 img{
