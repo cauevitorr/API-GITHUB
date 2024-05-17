@@ -1,0 +1,208 @@
+body{
+
+    background-color:cadetblue;
+
+}
+
+
+header{
+    background-color: cadetblue ;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 170px;
+}
+
+.login{
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  border-radius: 5px;
+  border: solid;
+  border-color: black;
+}
+
+.login:hover {
+  border-style: solid;
+  transition: all 0.5s ease-in-out;
+  border: black;
+  background-color: white;
+  color: black;
+}
+
+h2{
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.subtitulo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.siglaHP{
+    width: 100px;
+    margin-top: 100px;
+}
+
+label{
+    margin-bottom: 15px;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    background-color: cadetblue;
+}
+
+input{
+    margin-bottom: 15px;
+    
+        outline: none;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom-color: black;
+        border-bottom-style: solid;
+        background: none;
+}
+
+button{
+    margin-bottom: 15px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    background: white;
+    width: 100%;
+    position: relative;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+
+}
+
+.btn {
+  border-style: solid;
+    cursor: pointer;
+    border-left-color: beige;
+    border-top-color: beige;
+    border-top-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    color: black;
+    background: none;
+    font-size: 1rem;
+    margin-top: 30px;
+    font-weight: 50px;
+    padding: 9px 18px;
+    transition: all 0.2s;
+  }
+  
+  .btn:hover {
+    transition: all 0.5s ease-in-out;
+    border-radius: 8px;
+    border: none;
+    border: black;
+    background-color:darkblue;
+    color: white;
+  }
+
+  .character-container {
+    width: 100%;
+    background-color: darkslategrey;
+    color: white;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .character-box {
+    display: flex;
+    gap: 1rem;
+    background-color:dimgrey;
+    border-radius: 8px;
+    letter-spacing: 0.2rem;
+    cursor: pointer;
+  }
+
+  .character-box:hover{
+    box-shadow: 10px -10px white;
+  }
+  
+  .character-box img {
+    width: 50%;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+  
+  .character-info {
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    grid-auto-flow: 0.4rem;
+  }
+  
+  .character-info .true::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+    background-color: green;
+    border-radius: 50%;
+  }
+  
+  .character-info .false::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+    background-color: red;
+    border-radius: 50%;
+  }
+
+  .info{
+    background-color: darkgray;
+    border-radius: 8px;
+    
+  }
+
+  .img{
+    border-radius: 8px;
+  }
+
+  .Voltar2{
+    text-decoration:none ;
+    color: black;
+  }
+
+  .Voltar2 h2{
+    display: flex;
+    text-align: start;
+    align-items: baseline;
+    justify-content: start;
+  }
+  
+  .Voltar2:hover{
+    color: aliceblue;
+  }
+
+  .info p{
+    cursor: context-menu;
+  }
+
+    .info:hover{
+     box-shadow: 10px -10px white;
+    }
