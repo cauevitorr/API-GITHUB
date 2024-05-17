@@ -24,8 +24,9 @@
 
 
 header {
+    margin-top: 50px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
 
 
@@ -33,31 +34,42 @@ header {
     margin-right: 200px;
 }
 
-a {
+.sobre,
+.contato,
+.home02 {
+
     text-decoration: none;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
     margin-left: 50px;
     color: black;
+    font-size: 20px;
+
+}
+
+article {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
 }
 
 .home01 {
     font-family: "Poppins", sans-serif;
     font-weight: 600;
     font-style: normal;
-    margin-right: 280px;
+    margin-left: 170px;
     font-size: x-large;
     text-decoration: none;
     color: black;
 }
 
-.div-seguidores{
+.div-seguidores {
     display: flex;
     align-items: center;
 }
 
-.div-traço{
+.div-traço {
     width: 60px;
     height: 10px;
     background-color: #a5b4fc;
@@ -65,29 +77,102 @@ a {
     margin-right: 15px;
     margin-left: 170px;
 }
-.h-seguidores{
+
+.h-seguidores {
     font-family: "Poppins", sans-serif;
     font-weight: 600;
     font-style: normal;
 }
 
-footer{
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    font-style: normal;
+footer {
     display: flex;
-    /*\align-items: center;
-    justify-content: flex-start;*/ 
+    justify-content: space-between;
 }
 
-.svg-instagram{
-    margin-left: 50px;
+footer h3 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
 }
 
-img{
+.svg-facebook {
+    margin-right: 180px;
+}
+
+img {
     margin-right: 30px;
 }
 
-.direitos{
+.direitos {
     margin-left: 170px;
+}
+
+article {
+    margin-left: 30px;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.follower-container {
+    margin-left: 140px;
+    width: 95%;
+    color: black;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.follower-box {
+    gap: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.follower-box img {
+    width: 50%;
+    border-radius: 10px;
+}
+
+.follower-info {
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    grid-auto-flow: 0.4rem;
+}
+
+.info {
+    background-color: darkgray;
+    border-radius: 8px;
+
+}
+
+.img {
+    border-radius: 8px;
+}
+
+.div-button {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+}
+
+button {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    background-color: white;
+    border-Radius: 20px;
+    border-color: #a5b4fc;
+    padding: 18px  32px;
+    font-size: medium;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color:  #A5B4FC;
+    color: white;
+    border: none;
 }
