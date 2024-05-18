@@ -1,19 +1,46 @@
-const urlBase02 = "https://api.github.com/users/cauevitorr"
+const urlBase02 = "https://api.github.com/users/cauevitorr";
 
 const loadMe = async () => {
-    const res = await fetch(urlBase02);
-    const data = await res.json();
-    return {results: data}
+    try {
+        const res = await fetch(urlBase02);
+        if (!res.ok) {
+            throw new Error(`Erro na requisição: ${res.status} ${res.statusText}`);
+        }
+        const data = await res.json();
+        return data;
+    } catch (error) {
+        console.error("Erro ao carregar dados:", error);
+        return null;
+    }
 };
 
-const loadMyPromisse = async () => {
-    const eu = await Promise.all(loadMe());
-    console.log('Me: ', eu.results);
-    showMe(eu.results);
-    // return
+const loadMyPromise = async () => {
+    const divEu = document.getElementById('eu-container')
+
+    const eu = await loadMe();
+    if (eu) {
+        console.log("Id: ", eu.id)
+        console.log("Avatar URL:", eu.avatar_url);
+        console.log("Nome:", eu.name);
+        console.log("Empresa:", eu.company);
+        console.log("Localização:", eu.location);
+        console.log("Bio:", eu.bio);
+    }
+            const divFollow = document.createElement('div');
+        divFollow.id = `Eu-${eu.id}`;
+        divFollow.innerHTML = `
+            <img class="imagemDoCaue" src="${eu.avatar_url}" alt="Imagem do Cauê">
+            <article class="eu-info">
+                <h1>${eu.name}</h1>
+                <h2 class="bio">${eu.bio}</h2>
+            </article>
+        `;
+        divFollow.classList.add('eu-box');
+        divEu.appendChild(divFollow);
 };
 
-loadMe()
+loadMyPromise();
+
 
 //!----------------------------------------------------------------------------!//
 
@@ -48,18 +75,11 @@ function showCharacter(followers) {
         divFollow.classList.add('follower-box');
         followersContainer.appendChild(divFollow);
         divFollow.addEventListener('click', () => {
-            followerDetails(follower.id);
+            followerDetails(follower.login);
         });
     });
 }
 
-function followerDetails(id) {
-    console.log(id);
-    const idEncrypted = encryptId(id);
-    console.log(idEncrypted);
-    window.location.href = `follower.html?id=${idEncrypted}`;
-}
-
-function encryptId(id) {
-    return id;
+function followerDetails(login){
+    window.location.href = `https://api.github.com/users/${login}`
 }

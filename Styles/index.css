@@ -176,3 +176,18 @@ button:hover{
     color: white;
     border: none;
 }
+
+#Eu-138812443{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.imagemDoCaue{
+    border-radius: 150px;
+    width: 300px;
+}
+
+.bio{
+    color: #94A3B8;
+}
